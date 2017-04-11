@@ -29,9 +29,13 @@ $pdo = ConnectDB();
 
                 switch($pageNr)
                 {
-                    case 0: include('./Modules/Home.php');
+                    case 1: require('./Modules/Add.php');
                             break;
-                    case 1: include('./Modules/Test.php');
+                    case 2: require('./Modules/Edit.php');
+                            break;
+                    case 3: require('./Modules/Delete.php');
+                            break;
+                    default: require('./Modules/Home.php');
                             break;
                 }
 
