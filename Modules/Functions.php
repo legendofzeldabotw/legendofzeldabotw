@@ -23,7 +23,6 @@ function ImageCheck($row)
     
     $imageResult = $imagePath . $imageFile . $imagePathEnd;
     
-    
     if(file_exists($imageResult))
     {
         return $row['Name'];
