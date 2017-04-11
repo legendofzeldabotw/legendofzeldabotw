@@ -17,7 +17,7 @@ function ConnectDB()
 function ImageCheck($row)
 {
     $imageFile = $row['Name'];
-    $imagePath = 'Images/';
+    $imagePath = 'Images/Items/';
     $imagePathEnd = '.png';
     
     $imageResult = $imagePath . $imageFile . $imagePathEnd;
