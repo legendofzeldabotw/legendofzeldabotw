@@ -14,6 +14,13 @@ $pdo = ConnectDB();
         <title></title>
     </head>
     <body>
+        <div class="Header">
+            <?php
+            
+                require('Modules/Menu.php');
+            
+            ?>
+        </div>
         <div class="IndexPage">
             <main>
                 <?php
