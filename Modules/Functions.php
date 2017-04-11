@@ -14,6 +14,7 @@ function ConnectDB()
     return $pdo;
 }
 
+/*Check if the image is available*/
 function ImageCheck($row)
 {
     $imageFile = $row['Name'];

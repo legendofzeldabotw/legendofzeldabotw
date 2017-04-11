@@ -14,7 +14,7 @@ $pdo = ConnectDB();
         <title></title>
     </head>
     <body>
-        <div class="">
+        <div class="IndexPage">
             <main>
                 <?php
 
