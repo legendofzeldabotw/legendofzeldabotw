@@ -1,0 +1,36 @@
+<?php
+
+/*Connect to database*/
+function ConnectDB()
+{
+    try
+    {
+        $pdo = new PDO("mysql:host=localhost;dbname=legendofzeldabotw",'root','');
+    }
+    catch(PDOException $e)
+    {
+        echo $e->getMessage();
+    }
+    return $pdo;
+}
+
+function ImageCheck($row)
+{
+    $imageFile = $row['Name'];
+    $imagePath = 'Images/';
+    $imagePathEnd = '.png';
+    
+    $imageResult = $imagePath . $imageFile . $imagePathEnd;
+    
+    
+    if(file_exists($imageResult))
+    {
+        return $row['Name'];
+    }
+    else
+    {
+        echo "PlaceHolder";
+    }
+}
+
+?>

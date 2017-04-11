@@ -1,0 +1,13 @@
+.ItemBoxes
+{
+    border: 6px solid black;
+    width: 200px;
+    height: 300px;
+}
+
+.ImageBoxes
+{
+    border-bottom: 6px solid black;
+    width: 200px;
+    height: 200px;
+}
