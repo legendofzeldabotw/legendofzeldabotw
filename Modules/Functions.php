@@ -17,19 +17,19 @@ function ConnectDB()
 /*Check if the image is available*/
 function ImageCheck($row)
 {
-    $imageFile = $row['Name'];
     $imagePath = 'Images/Items/';
+    $imageFile = $row['Name'];
     $imagePathEnd = '.png';
     
     $imageResult = $imagePath . $imageFile . $imagePathEnd;
     
     if(file_exists($imageResult))
     {
-        return $row['Name'];
+        return $row ['Name'];
     }
     else
     {
-        echo "PlaceHolder";
+        return 'PlaceHolder';
     }
 }
 

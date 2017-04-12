@@ -21,8 +21,8 @@ $pdo = ConnectDB();
             
             ?>
         </div>
-        <div class="IndexPage">
-            <main>
+        <main class="centered">
+            <div class="IndexPage centered">
                 <?php
 
                 if(!empty($_GET["PageNr"]))
@@ -47,7 +47,7 @@ $pdo = ConnectDB();
                 }
 
                 ?>
-            </main>
-        </div>
+            </div>
+        </main>
     </body>
 </html>
