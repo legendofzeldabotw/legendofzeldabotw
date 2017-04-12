@@ -61,6 +61,15 @@ if(isset($_GET['action']))
                         else
                         {
                             //ADD VARIABLES TO DATABASE
+                            $parameters = array(':nameenemy'=>$nameEnemy,
+                                                ':descriptionenemy'=>$descriptionEnemy,
+                                                ':healingenemy'=>$healthEnemy,
+                                                ':dropsenemy'=>$dropsEnemy,
+                                                ':pictureenemy'=>$pictureEnemy);
+                            
+                            $sth = $pdo->prepare('INSERT INTO enemies(Name, Description, Health, Drops, Picture) VALUES (:nameenemy, :descriptionenemy, :healthenemy, :dropsenemy, :pictureenemy)');
+                
+                            $sth->execute($parameters);
                         }
                         
                     }
@@ -109,10 +118,13 @@ if(isset($_GET['action']))
                         {
                             //ADD VARIABLES TO DATABASE
                             $parameters = array(':nameitem'=>$nameItem,
-                                                ':descriptionitem'=>$decriptionItem,
+                                                ':descriptionitem'=>$descriptionItem,
                                                 ':healingitem'=>$healingItem,
                                                 ':pictureitem'=>$pictureItem);
-                            //$sth = $pdo->prepare('INSERT INTO')
+                            
+                            $sth = $pdo->prepare('INSERT INTO items(Name, Description, Healing) VALUES (:nameitem, :descriptionitem, :healingitem, :pictureitem)');
+                
+                            $sth->execute($parameters);
                         }
                         
                     }
