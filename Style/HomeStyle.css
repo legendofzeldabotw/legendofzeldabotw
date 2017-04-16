@@ -1,8 +1,3 @@
-body
-{
-    background-image: ;
-}
-
 main
 {
     width: 1200px;
@@ -19,7 +14,6 @@ main
     margin-top: 100px;
     width: 1200px;
     height: auto;
-    border: 2px solid black;
 }
 
 .ItemBoxes

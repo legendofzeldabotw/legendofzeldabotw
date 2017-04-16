@@ -3,9 +3,37 @@
 $sth = $pdo->prepare('select * from items');
 $sth->execute();
 //$row = $sth->fetch();
-
+$i = 0;
 echo "<table class='centered'>";
-    newRow:
+    echo "<tr>";
+    while ($row = $sth->fetch())
+    {
+
+        
+        
+        
+        echo "<td>";
+            echo "<div class='ItemBoxes'>";
+                echo "<img src='Images/Items/" . ImageCheck($row) . ".png' class='ImageBoxes'>";
+                echo "Name: " . $row ['Name'] . "<br />";
+                echo "Heals: " . $row ['Healing'] . " hearts";
+            echo "</div>";
+        echo "</td>";
+        $i++;
+        
+        if($i == 5)
+        {
+            $i = 0;
+            echo "</tr>";
+            echo "<tr>";
+        }
+    }
+echo "</table>";
+
+//needs an extra counter for every td it puts into an tr becouse of excess and last data not reached
+
+/*
+newRow:
     while ($sth->fetch())
     {
     
@@ -25,8 +53,6 @@ echo "<table class='centered'>";
     echo "</tr>";
     goto newRow;
     }
-echo "</table>";
-
-//needs an extra counter for every td it puts into an tr becouse of excess and last data not reached
+*/
 
 ?>
