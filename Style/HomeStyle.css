@@ -1,6 +1,6 @@
 main
 {
-    width: 1200px;
+    width: 1300px;
 }
 
 .centered
@@ -11,8 +11,7 @@ main
 
 .IndexPage
 {
-    margin-top: 100px;
-    width: 1200px;
+    margin-top: 50px;
     height: auto;
 }
 
@@ -22,13 +21,36 @@ main
     border-radius: 15px;
     width: 200px;
     height: 300px;
+    margin: 6px;
+    
 }
 
 .ImageBoxes
 {
-    border-bottom: 2px solid blue;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     width: 200px;
     height: 200px;
+}
+
+.ItemBoxes:hover
+{
+    border: 5px solid aqua;
+    margin: 3px;
+}
+
+.catBox
+{
+    border: 3px solid red;
+    width: 465px;
+    height: 305px;
+}
+
+.categories
+{
+    border: 2.5px solid red;
+    width: 100px;
+    height: 100px;
+    margin: 25px;
+    float: left;
 }

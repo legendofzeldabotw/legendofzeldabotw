@@ -33,4 +33,26 @@ function ImageCheck($row)
     }
 }
 
+/*Translates the amount of hearts to text*/
+//maybe add something to say 1,25 hearts instead of 1,25 heart
+function HeartsCheck($row)
+{
+    if($row ['Healing'] !== null)
+    {
+        if($row ['Healing'] > 1)
+        {
+            return "Heals: " . $row ['Healing'] . " hearts";
+        }
+        else
+        {
+            return "Heals: " . $row ['Healing'] . " heart";
+        }
+        
+    }
+    else
+    {
+        return null;
+    }
+}
+
 ?>

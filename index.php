@@ -18,11 +18,12 @@ $pdo = ConnectDB();
             <?php
             
                 require('Modules/Menu.php');
+                echo "<hr />";
             
             ?>
         </div>
-        <main class="centered">
-            <div class="IndexPage centered">
+        <div class="IndexPage">
+            <main class="centered">
                 <?php
 
                 if(!empty($_GET["PageNr"]))
@@ -36,18 +37,21 @@ $pdo = ConnectDB();
 
                 switch($pageNr)
                 {
-                    case 1: require('./Modules/Add.php');
-                            break;
-                    case 2: require('./Modules/Edit.php');
-                            break;
-                    case 3: require('./Modules/Delete.php');
-                            break;
                     default: require('./Modules/Home.php');
                             break;
+                    case 1: require('./Modules/Items.php');
+                            break;
+                    case 2: require('./Modules/Add.php');
+                            break;
+                    case 3: require('./Modules/Edit.php');
+                            break;
+                    case 4: require('./Modules/Delete.php');
+                            break;
+                    
                 }
 
                 ?>
-            </div>
-        </main>
+            </main>
+        </div>
     </body>
 </html>
