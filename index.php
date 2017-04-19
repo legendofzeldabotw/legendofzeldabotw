@@ -41,13 +41,12 @@ $pdo = ConnectDB();
                             break;
                     case 1: require('./Modules/Items.php');
                             break;
-                    case 2: require('./Modules/Add.php');
+                    case 7: require('./Modules/Add.php');
                             break;
-                    case 3: require('./Modules/Edit.php');
+                    case 8: require('./Modules/Edit.php');
                             break;
-                    case 4: require('./Modules/Delete.php');
+                    case 9: require('./Modules/Delete.php');
                             break;
-                    
                 }
 
                 ?>

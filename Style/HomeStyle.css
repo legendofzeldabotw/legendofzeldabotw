@@ -54,3 +54,12 @@ main
     margin: 25px;
     float: left;
 }
+
+.extLinks
+{
+    border: 3px solid green;
+    width: 300px;
+    height: 700px;
+    float: right;
+    margin-top: -305px;
+}
